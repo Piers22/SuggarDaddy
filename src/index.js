@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './header';
-import Main from './main';
-import Aside from './aside';
-import Footer from './footer';
-import Single from './single';
+import Header from './Header';
+import Main from './Main';
+import Aside from './Aside';
+import Footer from './Footer';
+import Single from './Single';
 
 const App = () => (
     <div>

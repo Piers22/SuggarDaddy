@@ -15,10 +15,10 @@ const App = () => (
         <div className="container">
             <div className="row">
                 <div className="col-md-8">
-                    <Main />
+                    <Aside />
                 </div>
                 <div className="col-md-4">
-                    <Aside />
+                    <Main />
                 </div>
             </div>
         </div>

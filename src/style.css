@@ -1,25 +1,26 @@
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
-
+/* Fondo negro para la página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Estilo para la cabecera */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em;
     background-color: #000;
 }
 
 .header-content .logo {
     font-size: 1.5em;
-    display: flex;
-    align-items:center
 }
 
 .header-content .logo img {
@@ -33,21 +34,17 @@ body {
 }
 
 .header-content nav ul li {
-    display: inline-block;
-    text-align: center;
+    display: inline;
 }
 
 .header-content nav ul li a {
     color: white;
     text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Añade un espacio entre el icono y el texto */
 }
 
 .header-content nav ul li a i {
     font-size: 1.5em;
-    margin-bottom: 0.5em; /* Ajusta el espacio según sea necesario */
+    margin-bottom: 0.5em;
 }
 
 .nav-link span {
@@ -63,30 +60,76 @@ body {
 }
 
 .user-profile .profile-image {
-    width: 25px; /* Ajusta el tamaño según sea necesario */
+    width: 25px;
     height: 25px;
     border-radius: 25%;
-    margin-bottom: 0.5em; /* Añade espacio entre la imagen y el nombre */
+    margin-bottom: 0.5em;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
 }
 
-aside {
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    padding: 1em;
+    background-color: #000;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 90vh;
+    width: calc(100% - 300px);
+}
+
+/* Sidebar */
+.sidebar {
     background-color: #222;
     padding: 1em;
     width: 300px;
     flex-shrink: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    border-radius: 8px; /* Redondear bordes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añadir sombra */
+    margin-left: -100px;
 }
 
-.messages-header {
+/* Cabecera de iconos */
+.icons-header {
+    background-color: #333;
+    padding: 1em;
+    border-radius: 8px 8px 0 0;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 1em;
 }
 
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.icon-container i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Lista de mensajes */
 .messages-list {
     margin-top: 1em;
+    background-color: #fff; /* Fondo blanco para mensajes */
+    color: #000; /* Texto negro para mensajes */
+    border-radius: 0 0 8px 8px;
+    padding: 1em;
 }
 
 .message-item {
@@ -95,50 +138,31 @@ aside {
     margin-bottom: 1em;
 }
 
-.message-item img {
+.message-avatar {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     margin-right: 1em;
 }
 
+.message-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-name {
+    font-weight: bold;
+}
+
+.message-preview {
+    color: gray;
+}
+
 .blocked-accounts {
     margin-top: 1em;
     color: gray;
 }
-
-main {
-    flex-grow: 1;
-    padding: 1em;
-}
-
-.profiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1em;
-}
-
-.profile-card {
-    background-color: #444;
-    padding: 1em;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.profile-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.profile-info {
-    margin: 0.5em 0;
-}
-
-.profile-actions {
-    display: flex;
-    justify-content: space-around;
-}
-
+ 
 .logo {
     display: flex;
     align-items: center;
@@ -146,15 +170,37 @@ main {
 }
 
 .logo-image {
-    width: 40px; 
+    width: 50px;
     height: auto;
     margin-right: 10px;
 }
 
 .logo-text {
-    color: #f4f3f3; 
+    color: #f4f3f3;
 }
 
-.User-text{
+.User-text {
     color: #f4f3f3;
+}
+
+/* Estilo para la cuadrícula de perfiles */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 1em;
+}
+
+/* Estilo para las tarjetas de perfil */
+.profile-card {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

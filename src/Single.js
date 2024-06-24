@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Single = () => {
-    return (
-        <div>
-            Detalle de usuario
-        </div>
-    );
+function Single() {
+  return (
+    <div>
+      <h1>Single Component</h1>
+    </div>
+  );
 }
 
 export default Single;
